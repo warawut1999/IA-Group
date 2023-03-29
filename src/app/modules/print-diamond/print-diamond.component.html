@@ -1,0 +1,14 @@
+<div class="mt-4">
+    <div class="form-group">
+        <label for="number">number</label>
+        <input type="number" id="number" [(ngModel)]="numberModel">
+    </div>
+    <br>
+    <button type="submit" (click)="submit()">submit</button>
+
+    <div class="container text-center w-30">
+        <ng-container *ngFor="let item of arrModel">
+            <p>{{item.number}}{{item.star}}{{item.number}}</p>
+        </ng-container>
+    </div>
+</div>

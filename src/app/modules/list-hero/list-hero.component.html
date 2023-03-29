@@ -1,0 +1,10 @@
+<h1>My Heros</h1>
+<ul>
+    <li *ngFor="let hero of listHeroes" (click)="selectHero(hero)">
+        {{hero.id}} {{hero.name}}
+    </li>
+</ul>
+
+<ng-container *ngIf="chosenHero">
+    <p>My hero is <span class="underline">{{chosenHero.name}}</span></p>
+</ng-container>

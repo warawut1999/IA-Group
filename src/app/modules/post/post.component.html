@@ -1,0 +1,15 @@
+<h1 *ngIf="!objectModel">Loading...</h1>
+<table style="margin-top: 24px;" *ngIf="objectModel">
+    <tr>
+        <th>Id</th>
+        <th>User Id</th>
+        <th>title</th>
+        <th>body</th>
+    </tr>
+    <tr *ngFor="let item of objectModel">
+        <td>{{item.id}}</td>
+        <td>{{item.userId}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+    </tr>
+</table>

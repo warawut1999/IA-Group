@@ -1,0 +1,15 @@
+<div class="mt-4">
+    <div class="form-group">
+        <label for="citizen">citizen</label>
+        <input type="text" id="citizen" [(ngModel)]="citizenModel">
+    </div>
+    <br>
+    <button type="submit" (click)="submit()">Checking Citizen Id</button>
+
+    <ng-container *ngIf="modelCheckCitizen">
+        <p>"success": {{modelCheckCitizen.success}}</p>
+        <p>"error_code": {{modelCheckCitizen.error_code}}</p>
+        <p>"error_msg": {{modelCheckCitizen.error_msg}}</p>
+        <p *ngIf="modelCheckCitizen.digit">"digit": {{modelCheckCitizen.digit}}</p>
+    </ng-container>
+</div>
